@@ -7,8 +7,8 @@ And Modified Again by Farzain - zFz
 */
 require_once('./line_class.php');
 
-$channelAccessToken = '792Epn4CQrJZw0HyD/tOnDrho2qZLphZWCjXjfSibySYF1e+awWVSJTpYmZnzNOinMbzEzg1PD9F0whuKd2VeAWHEykanQSNIbKQgFBJDag9mu40Pj9rYVChuS9d+TPBjSg0Flqtb5rVu3qZTpMUTwdB04t89/1O/w1cDnyilFU='; //Your Channel Access Token
-$channelSecret = '5718b130d5283cc28f961ab0cfb0251e';//Your Channel Secret
+$channelAccessToken = 'iztwUeForYBe5hcsCEQS8/riX6VPEmC5NpMICp0hxo0NSdXFdghllmfmpUPg+XrmfGpuU3RdFoSwyiOLzdS8XtASvHHrdVuNDA3dC4F9oWpmkD13P/qFAHiCrDgIyJB4axtJHXunfQNhrKmm3XaosQdB04t89/1O/w1cDnyilFU='; //Your Channel Access Token
+$channelSecret = '532678d8a34e02bd6d6180f758e9fbbb';//Your Channel Secret
 
 $client = new LINEBotTiny($channelAccessToken, $channelSecret);
 
@@ -16,7 +16,7 @@ $userId 	= $client->parseEvents()[0]['source']['userId'];
 $replyToken = $client->parseEvents()[0]['replyToken'];
 $message 	= $client->parseEvents()[0]['message'];
 $profil = $client->profil($userId);
-$pesan_datang = $message['text'];
+$pesan_datang = $message['Selamat Datang Di Group'];
 
 if($message['type']=='sticker')
 {	
@@ -67,7 +67,7 @@ if($url['result'] != 100)
 							'messages' => array(
 								array(
 										'type' => 'text',					
-										'text' => 'Maaf '.$profil->displayName.' Server Kami Sedang Sibuk Sekarang.'
+										'text' => 'text'
 									)
 							)
 						);
